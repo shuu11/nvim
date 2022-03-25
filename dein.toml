@@ -1,0 +1,48 @@
+#must plugin
+
+[[plugins]]
+#dein.vim
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+#カラーテーマ
+repo = 'ulwlu/elly.vim'
+hook_add = '''
+  colorscheme elly
+  set termguicolors
+'''
+
+[[plugins]]
+#自動で括弧()を閉じる
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+#ステータスラインのカスタマイズ
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+#インデントラインの可視化
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+#末尾の無駄なスペースをハイライト/削除する
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+#ヤンクされた範囲がハイライトする
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+  let g:highlightedyank_highlight_duration = 150
+'''
+
+
+#try plugin
+
+#[[plugins]]
+#vimをVSCodeのようなIDEライクな開発環境にする
+#repo = 'neoclide/coc.nvim'
+#source = 'release'
+#build = 'coc#util#install()'
+
+
+
