@@ -39,6 +39,7 @@ set pumheight=10 "変換候補で一度に表示される数
 set virtualedit=onemore "矩形選択中はカーソルを行末の1つ先まで移動可能にする
 set shell=powershell.exe "shell設定
 set splitright "分割時に右に表示
+setlocal omnifunc=syntaxcomplete#Complete "オムニ補完設定
 
 autocmd BufWritePre * :%s/\s\+$//ge "保存時に行末の空白を削除
 
