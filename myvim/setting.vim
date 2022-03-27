@@ -43,3 +43,4 @@ setlocal omnifunc=syntaxcomplete#Complete "オムニ補完設定
 
 autocmd BufWritePre * :%s/\s\+$//ge "保存時に行末の空白を削除
 
+

@@ -13,7 +13,7 @@ noremap B b
 noremap e E
 noremap E e
 noremap u <Nop>
-noremap == gg=G''
+noremap == gg=G''zz
 noremap @t :<C-u>vs<CR>:<C-u>terminal<CR>
 noremap <C-h> ^
 noremap <C-l> $
@@ -55,25 +55,22 @@ inoremap <C-o> <Nop>
 tnoremap <C-q> <C-\><C-n>:q<CR>
 tnoremap <ESC> <C-\><C-n>
 
-"default
-nnoremap diw diw
-nnoremap di" di"
-nnoremap dit dit
-nnoremap ciw ciw
-nnoremap ci" ci"
-nnoremap cit cit
-nnoremap yiw yiw
-nnoremap yi" yi"
-nnoremap yit yit
-nnoremap viw viw
-nnoremap vi" vi"
-nnoremap vit vit
+
+"plugin
+noremap <Space>e :<C-u>Fern . -reveal=% -drawer -toggle -width=40<CR>
 
 
+function! s:fern_settings() abort
+  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
+  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+endfunction
 
-
-
-
+augroup fern-settings
+  autocmd!
+  autocmd FileType fern call s:fern_settings()
+augroup END
 
 
 
