@@ -1,17 +1,11 @@
 " must
 noremap j gj
 noremap k gk
-noremap K <Nop>
+noremap K <ESC>0k
 noremap L <ESC>v$
-noremap J <Nop>
+noremap J <ESC>0j
 noremap H <ESC>v0
 noremap Y yy
-noremap w W
-noremap W w
-noremap b B
-noremap B b
-noremap e E
-noremap E e
 noremap u <Nop>
 noremap == gg=G''zz
 noremap @t :<C-u>vs<CR>:<C-u>terminal<CR>
@@ -22,9 +16,11 @@ noremap <C-k> <C-u>zz
 noremap <C-u> <Nop>
 noremap <C-r> <Nop>
 noremap <C-q> <Nop>
-noremap <S-Up> <Nop>
 noremap <C-z> u
 noremap <C-y> <C-r>
+noremap <C-w>j :<C-u>bnext<CR>
+noremap <C-w>k :<C-u>bprev<CR>
+noremap <S-Up> <Nop>
 noremap <S-Right> <Nop>
 noremap <S-Down> <Nop>
 noremap <S-Left> <Nop>
@@ -51,6 +47,10 @@ inoremap <C-k> <ESC>ko
 inoremap <C-h> <ESC>v0
 inoremap <C-l> <ESC>v$
 inoremap <C-o> <Nop>
+inoremap <C-w> <Nop>
+inoremap <C-z> <ESC>ui
+inoremap <C-y> <ESC><C-r>
+inoremap <S-Down> <Nop>
 
 tnoremap <C-q> <C-\><C-n>:q<CR>
 tnoremap <ESC> <C-\><C-n>

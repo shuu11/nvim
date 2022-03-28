@@ -1,5 +1,4 @@
 #must plugin
-
 [[plugins]]
 #dein.vim
 repo = 'Shougo/dein.vim'
@@ -75,13 +74,13 @@ repo = 'xolox/vim-misc'
 #.editorconfigがある場合、neovimの設定に上書きする
 repo = 'editorconfig/editorconfig-vim'
 
-#try plugin
-
-#[[plugins]]
-#vimをVSCodeのようなIDEライクな開発環境にする
-#repo = 'neoclide/coc.nvim'
-#source = 'release'
-#build = 'coc#util#install()'
+[[plugins]]
+#自動保存
+repo = 'vim-scripts/vim-auto-save'
+hook_add ='''
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+'''
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
@@ -101,3 +100,13 @@ autocmd FileType fern call glyph_palette#apply()
 autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
 '''
+
+#try plugin
+
+#[[plugins]]
+#vimをVSCodeのようなIDEライクな開発環境にする
+#repo = 'neoclide/coc.nvim'
+#source = 'release'
+#build = 'coc#util#install()'
+
+
