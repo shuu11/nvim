@@ -7,8 +7,10 @@ noremap J <ESC>0j
 noremap H <ESC>v0
 noremap Y yy
 noremap u <Nop>
+noremap q .
 noremap == gg=G''zz
 noremap @t :<C-u>vs<CR>:<C-u>terminal<CR>
+noremap @cd :<C-u>cd %:h<CR>
 noremap <C-h> ^
 noremap <C-l> $
 noremap <C-j> <C-d>zz
@@ -55,10 +57,18 @@ inoremap <S-Down> <Nop>
 tnoremap <C-q> <C-\><C-n>:q<CR>
 tnoremap <ESC> <C-\><C-n>
 
+"default
+noremap * *
+noremap N N
+noremap n n
+
+noremap f f
+noremap ; ;
+noremap , ,
+
 
 "plugin
 noremap <Space>e :<C-u>Fern . -reveal=% -drawer -toggle -width=40<CR>
-
 
 function! s:fern_settings() abort
   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)

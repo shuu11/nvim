@@ -76,11 +76,11 @@ repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 #自動保存
-repo = 'vim-scripts/vim-auto-save'
-hook_add ='''
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
-'''
+#repo = 'vim-scripts/vim-auto-save'
+#hook_add ='''
+#let g:auto_save = 1
+#let g:auto_save_in_insert_mode = 0
+#'''
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
